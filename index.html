@@ -24,14 +24,7 @@
         h2 { color: #c9184a; margin-top: 0; }
         p { color: #4a4a4a; line-height: 1.6; font-size: 1.05rem; }
         
-        .user-img {
-            width: 100%;
-            max-width: 280px;
-            border-radius: 15px;
-            margin: 15px 0;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-        }
-        .video-container {
+        .media-box {
             width: 100%;
             max-width: 280px;
             margin: 15px auto;
@@ -39,9 +32,10 @@
             overflow: hidden;
             box-shadow: 0 4px 10px rgba(0,0,0,0.1);
         }
-        video {
+        .media-box img, .media-box video {
             width: 100%;
             display: block;
+            border-radius: 15px;
         }
     </style>
 </head>
@@ -50,13 +44,15 @@
         <h1>Happy Birthday! 🎂</h1>
         <h2>Khaing Khaing Mon ✨</h2>
         
-        <!-- မင်းပေးတဲ့ ပုံလေး -->
-        <img class="user-img" src="https://i.imgur.com/XeBtY1L.jpg" alt="Khaing Khaing Mon">
+        <!-- ပြင်ဆင်ထားသော ပုံလင့်ခ် -->
+        <div class="media-box">
+            <img src="https://i.imgur.com/XeBtY1L.jpeg" alt="Khaing Khaing Mon" onerror="this.src='https://i.imgur.com/XeBtY1L.png'">
+        </div>
 
         <p>မွေးနေ့မှစ၍ နောင်နှစ်ပေါင်းများစွာတိုင် စိတ်ချမ်းသာ၊ ကိုယ်ကျန်းမာနဲ့ လိုအင်ဆန္ဒတွေ ပြည့်ဝပါစေကြောင်း ဆုတောင်းပေးလိုက်ပါတယ်။ 💖</p>
         
-        <!-- မင်းဆော့ထားတဲ့ ဗီဒီယိုလေး -->
-        <div class="video-container">
+        <!-- ပြင်ဆင်ထားသော ဗီဒီယိုလင့်ခ် -->
+        <div class="media-box">
             <video controls autoplay loop muted playsinline>
                 <source src="https://i.imgur.com/XeBtY1L.mp4" type="video/mp4">
                 Your browser does not support the video tag.
