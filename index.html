@@ -7,7 +7,7 @@
     <style>
         body { text-align: center; background: #ffe5ec; font-family: sans-serif; padding: 20px; }
         .card { display: none; background: white; padding: 20px; border-radius: 20px; max-width: 400px; margin: auto; }
-        img, video, audio { width: 100%; border-radius: 15px; margin-bottom: 10px; }
+        img, video { width: 100%; border-radius: 15px; margin-bottom: 10px; }
         button { padding: 15px 30px; font-size: 18px; border-radius: 50px; border: none; background: #ff4d6d; color: white; cursor: pointer; }
     </style>
 </head>
@@ -25,12 +25,8 @@
         <img src="1772361125125.jpg">
         
         <video id="myVideo" controls>
-            <source src="Tiktok_1783494859498342697.mp4" type="video/mp4">
+            <source src="tiktok_1783494859498342697.mp4" type="video/mp4">
         </video>
-
-        <audio id="myAudio" controls>
-            <source src="Hbd_-_zenith#fyp_#fypシ゚_#ti̇ktok_#myanmarsong_#music_.mp3" type="audio/mpeg">
-        </audio>
         
         <p>မွေးနေ့မှစ၍ ပျော်ရွှင်ပါစေ။ 💖</p>
     </div>
@@ -39,6 +35,7 @@
         function start() {
             document.getElementById('envelope').style.display = 'none';
             document.getElementById('card').style.display = 'block';
+            document.getElementById('myVideo').play();
         }
     </script>
 </body>
