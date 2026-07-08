@@ -7,7 +7,7 @@
     <style>
         body { text-align: center; background: #ffe5ec; font-family: sans-serif; padding: 20px; }
         .card { display: none; background: white; padding: 20px; border-radius: 20px; max-width: 400px; margin: auto; }
-        img, video { width: 100%; border-radius: 15px; margin-bottom: 10px; }
+        img, video, audio { width: 100%; border-radius: 15px; margin-bottom: 10px; }
         button { padding: 15px 30px; font-size: 18px; border-radius: 50px; border: none; background: #ff4d6d; color: white; cursor: pointer; }
     </style>
 </head>
@@ -21,14 +21,19 @@
     <div id="card" class="card">
         <h1>Happy Birthday! 🎂</h1>
         
-        <!-- မင်းရဲ့ ပုံနာမည်တွေကို ဒီမှာ အစားထိုးပေးထားတယ် -->
         <img src="1772361098034.jpg">
         <img src="1772361125125.jpg">
         
+        <!-- ဗီဒီယိုဖိုင် -->
         <video id="myVideo" controls>
-            <!-- မင်းရဲ့ ဗီဒီယိုနာမည်အတိုင်း ဒီနေရာမှာ ထည့်ပေးထားတယ် -->
-            <source src="Hbd-_-zenith#fyp_..." type="video/mp4">
+            <!-- ဒီနေရာမှာ ဗီဒီယိုဖိုင်နာမည် အစစ်ကို ထည့်ပါ -->
+            <source src="မင်းရဲ့ဗီဒီယိုနာမည်.mp4" type="video/mp4">
         </video>
+
+        <!-- သီချင်းသီးသန့် (MP3) -->
+        <audio id="myAudio" controls>
+            <source src="Hbd_-_zenith#fyp_#fypシ゚_#ti̇ktok_#myanmarsong_#music_.mp3" type="audio/mpeg">
+        </audio>
         
         <p>မွေးနေ့မှစ၍ ပျော်ရွှင်ပါစေ။ 💖</p>
     </div>
@@ -37,9 +42,7 @@
         function start() {
             document.getElementById('envelope').style.display = 'none';
             document.getElementById('card').style.display = 'block';
-            document.getElementById('myVideo').play();
         }
     </script>
 </body>
 </html>
-မင်းရဲ့
