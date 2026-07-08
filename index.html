@@ -3,17 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Happy Birthday Khaing Khaing Mon!</title>
+    <title>Happy Birthday!</title>
     <style>
-        body { text-align: center; font-family: sans-serif; background: #ffe5ec; padding: 20px 15px; margin: 0; min-height: 100vh; display: flex; justify-content: center; align-items: center; flex-direction: column; }
+        body { text-align: center; font-family: sans-serif; background: #ffe5ec; margin: 0; min-height: 100vh; display: flex; justify-content: center; align-items: center; flex-direction: column; }
         .envelope-container { cursor: pointer; animation: float 2s infinite ease-in-out; }
         .envelope { font-size: 100px; }
-        .open-btn { margin-top: 15px; background: #ff4d6d; color: white; border: none; padding: 10px 25px; font-size: 1.1rem; border-radius: 50px; font-weight: bold; }
-        .card { background: white; padding: 25px; border-radius: 20px; box-shadow: 0 10px 20px rgba(0,0,0,0.1); max-width: 400px; width: 100%; display: none; box-sizing: border-box; }
-        h1 { color: #ff4d6d; font-size: 1.8rem; margin-bottom: 5px; }
-        h2 { color: #c9184a; margin-top: 0; margin-bottom: 20px; }
-        .media-box { width: 100%; max-width: 325px; margin: 0 auto 15px auto; border-radius: 15px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.15); }
-        .media-box img, .media-box video { width: 100%; display: block; border-radius: 15px; }
+        .open-btn { margin-top: 15px; background: #ff4d6d; color: white; border: none; padding: 12px 25px; font-size: 1.1rem; border-radius: 50px; font-weight: bold; cursor: pointer; }
+        .card { background: white; padding: 25px; border-radius: 20px; box-shadow: 0 10px 20px rgba(0,0,0,0.1); max-width: 400px; width: 90%; display: none; }
+        .media-box { width: 100%; margin-bottom: 15px; border-radius: 15px; overflow: hidden; }
+        .media-box img { width: 100%; display: block; border-radius: 15px; }
         @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
     </style>
 </head>
@@ -21,7 +19,8 @@
 
     <div class="envelope-container" id="envelopeContainer" onclick="openEnvelope()">
         <div class="envelope">✉️💝</div>
-        <button class="open-btn">ခိုင်ခိုင့်အတွက် စာအိတ်လေးဖွင့်ရန် 💌</button>
+        <!-- ဒီမှာ အင်္ဂလိပ်လို ပြင်ပေးထားပါတယ် -->
+        <button class="open-btn">Open for Khaing Khaing Mon 💌</button>
     </div>
 
     <div class="card" id="birthdayCard">
@@ -31,24 +30,21 @@
         <div class="media-box"><img src="1772361125125.jpg" alt="Photo 1"></div>
         <div class="media-box"><img src="1772361098034.jpg" alt="Photo 2"></div>
         
-        <div class="media-box">
-            <video controls>
-                <source src="tiktok_1783494859498342697.mp4" type="video/mp4">
-            </video>
-        </div>
-
-        <video id="bgMusic" loop style="display:none;">
-            <source src="hbd-music.mp4" type="video/mp4">
-        </video>
-
-        <p>မွေးနေ့မှစ၍ နောင်နှစ်ပေါင်းများစွာတိုင် စိတ်ချမ်းသာ၊ ကိုယ်ကျန်းမာနဲ့ လိုအင်ဆန္ဒတွေ ပြည့်ဝပါစေကြောင်း ဆုတောင်းပေးလိုက်ပါတယ်။ 💖</p>
+        <p>Happy Birthday! Wishing you a day filled with love, laughter, and joy. Stay beautiful and happy always! 💖</p>
     </div>
+
+    <video id="bgMusic" loop style="display:none;">
+        <source src="video.mp4" type="video/mp4">
+    </video>
 
     <script>
         function openEnvelope() {
+            var music = document.getElementById('bgMusic');
             document.getElementById('envelopeContainer').style.display = 'none';
             document.getElementById('birthdayCard').style.display = 'block';
-            document.getElementById('bgMusic').play();
+            music.play().catch(() => {
+                alert("Please tap the screen to start the music!");
+            });
         }
     </script>
 </body>
