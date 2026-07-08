@@ -5,84 +5,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Happy Birthday Khaing Khaing Mon!</title>
     <style>
-        body { 
-            text-align: center; 
-            font-family: sans-serif; 
-            background: #ffe5ec; 
-            padding: 20px 15px; 
-            margin: 0;
-        }
-        .card { 
-            background: white; 
-            padding: 25px; 
-            border-radius: 20px; 
-            box-shadow: 0 10px 20px rgba(0,0,0,0.1); 
-            max-width: 400px; 
-            margin: 0 auto; 
-        }
+        body { text-align: center; font-family: sans-serif; background: #ffe5ec; padding: 20px 15px; margin: 0; min-height: 100vh; display: flex; justify-content: center; align-items: center; flex-direction: column; }
+        .envelope-container { cursor: pointer; animation: float 2s infinite ease-in-out; }
+        .envelope { font-size: 100px; }
+        .open-btn { margin-top: 15px; background: #ff4d6d; color: white; border: none; padding: 10px 25px; font-size: 1.1rem; border-radius: 50px; font-weight: bold; }
+        .card { background: white; padding: 25px; border-radius: 20px; box-shadow: 0 10px 20px rgba(0,0,0,0.1); max-width: 400px; width: 100%; display: none; box-sizing: border-box; }
         h1 { color: #ff4d6d; font-size: 1.8rem; margin-bottom: 5px; }
         h2 { color: #c9184a; margin-top: 0; margin-bottom: 20px; }
-        p { color: #4a4a4a; line-height: 1.6; font-size: 1.05rem; margin-top: 20px; }
-        
-        .media-box {
-            width: 100%;
-            max-width: 325px;
-            margin: 0 auto 15px auto;
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-        }
-        .media-box img, .media-box video {
-            width: 100%;
-            display: block;
-            border-radius: 15px;
-        }
-
-        /* Music Player Style */
-        .music-player {
-            margin: 15px auto;
-            width: 100%;
-            max-width: 325px;
-        }
-        .music-player audio {
-            width: 100%;
-        }
+        .media-box { width: 100%; max-width: 325px; margin: 0 auto 15px auto; border-radius: 15px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.15); }
+        .media-box img, .media-box video { width: 100%; display: block; border-radius: 15px; }
+        @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
     </style>
 </head>
 <body>
-    <div class="card">
+
+    <div class="envelope-container" id="envelopeContainer" onclick="openEnvelope()">
+        <div class="envelope">✉️💝</div>
+        <button class="open-btn">ခိုင်ခိုင့်အတွက် စာအိတ်လေးဖွင့်ရန် 💌</button>
+    </div>
+
+    <div class="card" id="birthdayCard">
         <h1>Happy Birthday! 🎂</h1>
         <h2>Khaing Khaing Mon ✨</h2>
         
-        <!-- တင်ထားတဲ့ ပထမပုံ -->
+        <div class="media-box"><img src="1772361125125.jpg" alt="Photo 1"></div>
+        <div class="media-box"><img src="1772361098034.jpg" alt="Photo 2"></div>
+        
         <div class="media-box">
-            <img src="1772361125125.jpg" alt="Khaing Khaing Mon 1">
-        </div>
-
-        <!-- တင်ထားတဲ့ ဒုတိယပုံ -->
-        <div class="media-box">
-            <img src="1772361098034.jpg" alt="Khaing Khaing Mon 2">
-        </div>
-
-        <!-- တင်ထားတဲ့ ဗီဒီယို -->
-        <div class="media-box">
-            <video controls autoplay loop muted playsinline>
+            <video controls>
                 <source src="tiktok_1783494859498342697.mp4" type="video/mp4">
-                Your browser does not support the video tag.
             </video>
         </div>
 
-        <!-- Happy Birthday နောက်ခံသီချင်း Player -->
-        <div class="music-player">
-            <p style="font-size: 0.9rem; color: #ff4d6d; margin: 0 0 5px 0;">🎵 Play Music for Her 💖</p>
-            <audio controls autoplay loop>
-                <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mp3">
-                <!-- အပေါ်ကလင့်ခ်နေရာမှာ အဆင်ပြေမယ့် တခြား HBD သီချင်းလင့်ခ် အစားထိုးနိုင်ပါတယ် -->
-                Your browser does not support the audio element.
-            </audio>
-        </div>
+        <video id="bgMusic" loop style="display:none;">
+            <source src="hbd-music.mp4" type="video/mp4">
+        </video>
 
         <p>မွေးနေ့မှစ၍ နောင်နှစ်ပေါင်းများစွာတိုင် စိတ်ချမ်းသာ၊ ကိုယ်ကျန်းမာနဲ့ လိုအင်ဆန္ဒတွေ ပြည့်ဝပါစေကြောင်း ဆုတောင်းပေးလိုက်ပါတယ်။ 💖</p>
     </div>
+
+    <script>
+        function openEnvelope() {
+            document.getElementById('envelopeContainer').style.display = 'none';
+            document.getElementById('birthdayCard').style.display = 'block';
+            document.getElementById('bgMusic').play();
+        }
+    </script>
 </body>
 </html>
