@@ -24,23 +24,18 @@
         h2 { color: #c9184a; margin-top: 0; margin-bottom: 20px; }
         p { color: #4a4a4a; line-height: 1.6; font-size: 1.05rem; margin-top: 20px; }
         
-        /* ပုံစံပြင်ဆင်ချက်များ */
-        .user-img {
+        .media-box {
             width: 100%;
             max-width: 325px;
-            border-radius: 15px;
-            margin-bottom: 20px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-        }
-        
-        /* TikTok Embed Container */
-        .tiktok-container {
-            width: 100%;
-            max-width: 325px;
-            margin: 0 auto;
+            margin: 0 auto 15px auto;
             border-radius: 15px;
             overflow: hidden;
             box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+        .media-box img, .media-box video {
+            width: 100%;
+            display: block;
+            border-radius: 15px;
         }
     </style>
 </head>
@@ -49,12 +44,22 @@
         <h1>Happy Birthday! 🎂</h1>
         <h2>Khaing Khaing Mon ✨</h2>
         
-        <!-- ပြင်ဆင်ပြီးသား ပုံလင့်ခ်အသစ် -->
-        <img class="user-img" src="https://images.weserv.nl/?url=imgur.com/XeBtY1L.jpg" alt="Khaing Khaing Mon">
+        <!-- တင်ထားတဲ့ ပထမပုံ -->
+        <div class="media-box">
+            <img src="1772361125125.jpg" alt="Khaing Khaing Mon 1">
+        </div>
 
-        <!-- စနစ်မှန် TikTok Embed ဗီဒီယို -->
-        <div class="tiktok-container">
-            <iframe src="https://www.tiktok.com/embed/v2/7440331006526131464" style="width: 100%; height: 580px; border: none;" allowfullscreen allow="autoplay; encrypted-media"></iframe>
+        <!-- တင်ထားတဲ့ ဒုတိယပုံ -->
+        <div class="media-box">
+            <img src="1772361098034.jpg" alt="Khaing Khaing Mon 2">
+        </div>
+
+        <!-- တင်ထားတဲ့ ဗီဒီယို -->
+        <div class="media-box">
+            <video controls autoplay loop muted playsinline>
+                <source src="tiktok_1783494859498342697.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
         </div>
 
         <p>မွေးနေ့မှစ၍ နောင်နှစ်ပေါင်းများစွာတိုင် စိတ်ချမ်းသာ၊ ကိုယ်ကျန်းမာနဲ့ လိုအင်ဆန္ဒတွေ ပြည့်ဝပါစေကြောင်း ဆုတောင်းပေးလိုက်ပါတယ်။ 💖</p>
